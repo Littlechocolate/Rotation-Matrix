@@ -93,6 +93,7 @@ sub {
   position: absolute;
   inset: 0;
   cursor: grab;
+  touch-action: none;
 }
 
 #canvasHost:active {
@@ -355,6 +356,11 @@ sub {
   transform: scale(1.12);
 }
 
+.slider-wrap input[type="range"]::-moz-range-track {
+  background: transparent;
+  border: none;
+}
+
 .slider-wrap input[type="range"]::-moz-range-thumb {
   width: 12px;
   height: 12px;
@@ -395,6 +401,8 @@ sub {
   border-radius: 3px;
   padding: 1px 3px;
   outline: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .ang-val input::-webkit-outer-spin-button,
@@ -715,23 +723,23 @@ sub {
         <div class="ang-row" style="--c:var(--x)">
           <span class="ang-label">θ<sub>x</sub></span>
           <div class="slider-wrap">
-            <input type="range" id="ax" min="-180" max="180" value="30" step="1">
+            <input type="range" id="ax" min="-180" max="180" value="30" step="1" aria-label="绕 X 轴旋转角度">
           </div>
-          <span class="ang-val" id="axv">30°</span>
+          <span class="ang-val" id="axv" tabindex="0" role="button">30°</span>
         </div>
         <div class="ang-row" style="--c:var(--y)">
           <span class="ang-label">θ<sub>y</sub></span>
           <div class="slider-wrap">
-            <input type="range" id="ay" min="-180" max="180" value="45" step="1">
+            <input type="range" id="ay" min="-180" max="180" value="45" step="1" aria-label="绕 Y 轴旋转角度">
           </div>
-          <span class="ang-val" id="ayv">45°</span>
+          <span class="ang-val" id="ayv" tabindex="0" role="button">45°</span>
         </div>
         <div class="ang-row" style="--c:var(--z)">
           <span class="ang-label">θ<sub>z</sub></span>
           <div class="slider-wrap">
-            <input type="range" id="az" min="-180" max="180" value="60" step="1">
+            <input type="range" id="az" min="-180" max="180" value="60" step="1" aria-label="绕 Z 轴旋转角度">
           </div>
-          <span class="ang-val" id="azv">60°</span>
+          <span class="ang-val" id="azv" tabindex="0" role="button">60°</span>
         </div>
       </div>
 
@@ -859,8 +867,10 @@ function fmtCoord(n) {
 }
 
 function fmtDeg(n) {
-  const clean = Math.abs(n) < 1e-6 ? 0 : n;
-  return Number.isInteger(clean) ? `${clean}°` : `${clean.toFixed(1)}°`;
+  if (Math.abs(n) < 1e-6) return '0°';
+  if (Number.isInteger(n)) return `${n}°`;
+  const s = n.toFixed(1);
+  return (s === '-0.0' ? '0.0' : s) + '°';
 }
 
 function matrixCells(axis, theta, symbolic) {
@@ -888,7 +898,7 @@ scene.background = new THREE.Color(palette.bg);
 scene.fog = new THREE.Fog(palette.bg, 22, 60);
 
 const camera = new THREE.PerspectiveCamera(48, 1, 0.1, 1000);
-camera.position.set(7, 5, 9);
+camera.position.set(8.2, 5.8, 10.5);
 camera.lookAt(0, 0, 0);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -1062,19 +1072,21 @@ function updateVector(g, vec) {
     const pos = g.userData.line.geometry.attributes.position;
     pos.setXYZ(1, vec.x, vec.y, vec.z);
     pos.needsUpdate = true;
+    g.userData.line.geometry.computeBoundingSphere();
     g.userData.line.computeLineDistances();
     g.userData.tip.position.copy(vec);
     return;
   }
   const { shaft, head, baseHeadLen } = g.userData;
   const headLen = Math.min(baseHeadLen, len * 0.35);
+  const headScale = headLen / baseHeadLen;
   const shaftLen = Math.max(0, len - headLen);
   shaft.visible = shaftLen > 0.0005;
   if (shaft.visible) {
-    shaft.scale.set(1, shaftLen, 1);
+    shaft.scale.set(headScale, shaftLen, headScale);
     shaft.position.set(0, shaftLen * 0.5, 0);
   }
-  head.scale.set(1, headLen, 1);
+  head.scale.set(headScale, headLen, headScale);
   head.position.set(0, shaftLen + headLen * 0.5, 0);
   orientAlong(g, vec.clone().normalize());
 }
@@ -1321,12 +1333,14 @@ function update() {
 
   renderSteps(vs);
   renderMatrices(R);
+  return { vs, R };
 }
 
 ['vx', 'vy', 'vz'].forEach((id) => {
   const input = document.getElementById(id);
   input.addEventListener('input', () => {
-    state[id] = parseFloat(input.value) || 0;
+    const parsed = parseFloat(input.value);
+    state[id] = Number.isFinite(parsed) ? parsed : 0;
     update();
   });
 });
@@ -1350,7 +1364,7 @@ ANG_IDS.forEach((id) => {
     update();
   });
 
-  valEl.addEventListener('click', () => {
+  const openEditor = () => {
     if (valEl.querySelector('input')) return;
     if (state.animating) stopAnim();
     const prev = state[id];
@@ -1372,7 +1386,7 @@ ANG_IDS.forEach((id) => {
       let n = prev;
       if (commit) {
         const parsed = parseFloat(input.value);
-        if (!Number.isNaN(parsed)) {
+        if (Number.isFinite(parsed)) {
           n = Math.max(-180, Math.min(180, parsed));
         }
       }
@@ -1384,12 +1398,23 @@ ANG_IDS.forEach((id) => {
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
+        e.stopPropagation();
         finish(true);
       } else if (e.key === 'Escape') {
         e.preventDefault();
+        e.stopPropagation();
         finish(false);
       }
     });
+  };
+
+  valEl.addEventListener('click', openEditor);
+  valEl.addEventListener('keydown', (e) => {
+    if (e.target !== valEl) return;
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openEditor();
+    }
   });
 });
 
@@ -1421,13 +1446,16 @@ animBtn.addEventListener('click', () => {
     update();
     return;
   }
-  anim = { t: [state.ax, state.ay, state.az], phase: 0 };
+  const targets = [state.ax, state.ay, state.az];
+  if (targets.every((a) => Math.abs(a) < 1e-6)) return;
+  anim = { t: targets, phase: 0 };
   state.animating = true;
   animBtn.textContent = '停止';
   animBtn.classList.add('active');
   ANG_IDS.forEach((id) => setAngleUI(id, 0, true));
   clearTrail();
-  update();
+  const res = update();
+  pushTrailPoint(res.vs[3]);
 });
 
 function animateStep(dt) {
@@ -1448,14 +1476,22 @@ function animateStep(dt) {
   if (nextVal === target) {
     setAngleUI(id, target);
     anim.phase++;
+    while (anim.phase < 3 && state[ANG_IDS[anim.phase]] === anim.t[anim.phase]) {
+      anim.phase++;
+    }
   }
-  update();
-  pushTrailPoint(compute(state).vs[3]);
+  const res = update();
+  pushTrailPoint(res.vs[3]);
+  if (anim.phase >= 3) {
+    stopAnim();
+  }
 }
 
-darkMql.addEventListener('change', (e) => {
-  applyThemeToScene(e.matches);
-});
+if (darkMql.addEventListener) {
+  darkMql.addEventListener('change', (e) => {
+    applyThemeToScene(e.matches);
+  });
+}
 
 let lastTime = performance.now();
 function loop() {
