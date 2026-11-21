@@ -75,6 +75,7 @@ For $\mathbf{v}_0 = (2, 1, 1)$ and $(\theta_x, \theta_y, \theta_z) = (30^\circ, 
 
 | Control | Behavior |
 | :--- | :--- |
+| **Language (`EN` / `简` / `繁`)** | Switch UI labels between English (default), Simplified Chinese, and Traditional Chinese (Hong Kong). |
 | **3D Viewport** | Drag to orbit around the origin; scroll to zoom (`minDistance: 4`, `maxDistance: 30`). |
 | **Vector `v`** | Edit `x`, `y`, `z` components directly (`step: 0.1`); updates the 3D scene and matrices live. |
 | **Angles `θx`, `θy`, `θz`** | Drag sliders (`-180°` to `180°`) or click a degree readout to type an exact value (`Enter` to commit, `Esc` to cancel). |
