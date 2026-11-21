@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rotation Matrix</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="app">
+  <section id="stage">
+    <div id="canvasHost"></div>
+    <ul class="legend" aria-hidden="true">
+      <li><i class="legend-mark dashed" style="color:var(--v0)"></i><span>v<sub>0</sub></span></li>
+      <li id="legend-v1"><i class="legend-mark" style="color:var(--x)"></i><span>v<sub>1</sub></span></li>
+      <li id="legend-v2"><i class="legend-mark" style="color:var(--y)"></i><span>v<sub>2</sub></span></li>
+      <li><i class="legend-mark final" style="color:var(--vf)"></i><span>v′</span></li>
+      <li id="legend-u"><i class="legend-mark dashed" style="color:var(--axis-u)"></i><span>û</span></li>
+    </ul>
+    <button type="button" class="view-btn" id="resetViewBtn" data-i18n="resetView">Reset View</button>
+  </section>
+
+  <aside id="rail">
+    <header class="rail-head">
+      <div class="rail-title-wrap">
+        <h1 data-i18n="title">Rotation Matrix</h1>
+        <span class="rail-formula">v′ = R<sub>z</sub>R<sub>y</sub>R<sub>x</sub>v</span>
+      </div>
+      <div class="seg lang-seg" id="langSeg" role="group" aria-label="Language">
+        <button type="button" class="active" data-lang="en" lang="en" title="English">EN</button>
+        <button type="button" data-lang="zh-CN" lang="zh-Hans" title="简体中文">简</button>
+        <button type="button" data-lang="zh-HK" lang="zh-Hant-HK" title="繁體中文（香港）">繁</button>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 data-i18n="vector">Vector v</h2>
+      </div>
+      <div class="vec-grid">
+        <label class="vec-field" style="--c:var(--x)">
+          <span class="vec-axis">x</span>
+          <input type="number" id="vx" value="2" step="0.1">
+        </label>
+        <label class="vec-field" style="--c:var(--y)">
+          <span class="vec-axis">y</span>
+          <input type="number" id="vy" value="1" step="0.1">
+        </label>
+        <label class="vec-field" style="--c:var(--z)">
+          <span class="vec-axis">z</span>
+          <input type="number" id="vz" value="1" step="0.1">
+        </label>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 data-i18n="angles">Rotation Angles</h2>
+      </div>
+      <div class="ang-list">
+        <div class="ang-row" style="--c:var(--x)">
+          <span class="ang-label">θ<sub>x</sub></span>
+          <div class="slider-wrap">
+            <input type="range" id="ax" min="-180" max="180" value="30" step="1" aria-label="Rotation angle around X axis">
+          </div>
+          <span class="ang-val" id="axv" tabindex="0" role="button">30°</span>
+        </div>
+        <div class="ang-row" style="--c:var(--y)">
+          <span class="ang-label">θ<sub>y</sub></span>
+          <div class="slider-wrap">
+            <input type="range" id="ay" min="-180" max="180" value="45" step="1" aria-label="Rotation angle around Y axis">
+          </div>
+          <span class="ang-val" id="ayv" tabindex="0" role="button">45°</span>
+        </div>
+        <div class="ang-row" style="--c:var(--z)">
+          <span class="ang-label">θ<sub>z</sub></span>
+          <div class="slider-wrap">
+            <input type="range" id="az" min="-180" max="180" value="60" step="1" aria-label="Rotation angle around Z axis">
+          </div>
+          <span class="ang-val" id="azv" tabindex="0" role="button">60°</span>
+        </div>
+      </div>
+
+      <div class="ang-controls">
+        <label class="chk-row">
+          <input type="checkbox" id="showSteps" checked>
+          <span data-i18n="showSteps">Show intermediate steps</span>
+        </label>
+        <label class="chk-row">
+          <input type="checkbox" id="showAxis" checked>
+          <span data-i18n="showAxis">Show invariant axis û</span>
+        </label>
+        <div class="btn-row">
+          <button type="button" class="btn primary" id="animateBtn">Play Sequence</button>
+          <button type="button" class="btn" id="resetBtn" data-i18n="reset">Reset</button>
+        </div>
+        <button type="button" class="btn preset" id="gimbalBtn" data-i18n="gimbalBtn">Gimbal Lock (θy = 90°)</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 data-i18n="result">Result</h2>
+      </div>
+      <div class="steps-list" id="steps"></div>
+      <div class="euler-box">
+        <div class="euler-title" data-i18n="eulerTitle">Equivalent Axis–Angle</div>
+        <div id="eulerReadout"></div>
+        <div class="gimbal-note" id="gimbalNote" hidden></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 data-i18n="matrices">Rotation Matrices</h2>
+        <div class="seg" id="matModeSeg">
+          <button type="button" class="active" data-mode="symbolic" data-i18n="symbolic">Symbolic</button>
+          <button type="button" data-mode="numeric" data-i18n="numeric">Numeric</button>
+        </div>
+      </div>
+      <div class="matrices-list" id="matrices"></div>
+    </section>
+  </aside>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
