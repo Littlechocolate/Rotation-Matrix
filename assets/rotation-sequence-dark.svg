@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" width="960" height="320">
+<rect x="0.5" y="0.5" width="959" height="319" rx="8" fill="#161b22" stroke="#30363d"/>
+<line x1="320" y1="16" x2="320" y2="304" stroke="#262c36"/>
+<line x1="640" y1="16" x2="640" y2="304" stroke="#262c36"/>
+<text x="160.00" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#e6edf3">1. Rotate around X (<tspan fill="#e66558">θ</tspan><tspan fill="#e66558" dy="2.5" font-size="80%">x</tspan><tspan dy="-2.5"> = 30°</tspan>)</text>
+<line x1="133.35" y1="158.61" x2="225.09" y2="181.97" stroke="#232a35" stroke-width="1"/>
+<line x1="133.35" y1="158.61" x2="53.78" y2="194.46" stroke="#232a35" stroke-width="1"/>
+<line x1="84.84" y1="180.47" x2="185.00" y2="213.53" stroke="#232a35" stroke-width="1"/>
+<line x1="191.00" y1="173.29" x2="117.96" y2="219.32" stroke="#232a35" stroke-width="1"/>
+<line x1="53.78" y1="194.46" x2="157.96" y2="234.82" stroke="#232a35" stroke-width="1"/>
+<line x1="225.09" y1="181.97" x2="157.96" y2="234.82" stroke="#232a35" stroke-width="1"/>
+<line x1="139.49" y1="190.46" x2="139.22" y2="176.79" stroke="#45b572" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.2"/>
+<line x1="139.22" y1="176.79" x2="137.40" y2="82.84" stroke="#45b572" stroke-width="1.15" stroke-linecap="round" stroke-opacity="0.36"/>
+<polygon points="137.31,78.16 139.94,84.62 134.94,84.71" fill="#45b572" fill-opacity="0.36"/>
+<text x="147.31" y="76.16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-style="italic" font-weight="600" fill="#45b572" fill-opacity="0.6">y</text>
+<line x1="150.34" y1="170.95" x2="139.22" y2="176.79" stroke="#5798ec" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.2"/>
+<line x1="139.22" y1="176.79" x2="62.63" y2="217.03" stroke="#5798ec" stroke-width="1.15" stroke-linecap="round" stroke-opacity="0.36"/>
+<polygon points="58.48,219.21 63.08,213.97 65.40,218.40" fill="#5798ec" fill-opacity="0.36"/>
+<text x="47.48" y="224.21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-style="italic" font-weight="600" fill="#5798ec" fill-opacity="0.6">z</text>
+<line x1="124.71" y1="172.62" x2="139.22" y2="176.79" stroke="#e66558" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.35"/>
+<line x1="139.22" y1="176.79" x2="232.74" y2="203.68" stroke="#e66558" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.95"/>
+<polygon points="237.23,204.97 230.30,205.58 231.68,200.77" fill="#e66558" fill-opacity="0.95"/>
+<text x="247.23" y="208.97" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-style="italic" font-weight="600" fill="#e66558" fill-opacity="1.0">x</text>
+<polygon points="206.94,196.26 186.53,169.71 186.09,170.72 185.66,171.74 185.24,172.77 184.82,173.81 184.40,174.85 183.99,175.91 183.59,176.97 183.20,178.04 182.81,179.12 182.43,180.20 182.06,181.29 181.69,182.38 181.34,183.48 180.99,184.59 180.64,185.70 180.31,186.81 179.98,187.93 179.67,189.05 179.36,190.17 179.06,191.29 178.77,192.42 178.48,193.55 178.21,194.67 177.95,195.80 177.69,196.93 177.44,198.06 177.21,199.18 176.98,200.31 176.76,201.43 176.55,202.55 176.36,203.67 176.17,204.78" fill="#e66558" fill-opacity="0.18"/>
+<line x1="206.94" y1="196.26" x2="186.53" y2="169.71" stroke="#e66558" stroke-width="1" stroke-dasharray="2.5 2.5" stroke-opacity="0.55"/>
+<line x1="206.94" y1="196.26" x2="176.17" y2="204.78" stroke="#e66558" stroke-width="1" stroke-dasharray="2.5 2.5" stroke-opacity="0.65"/>
+<circle cx="206.94" cy="196.26" r="2.3" fill="#e66558"/>
+<path d="M 186.53,169.71 L 186.09,170.72 L 185.66,171.74 L 185.24,172.77 L 184.82,173.81 L 184.40,174.85 L 183.99,175.91 L 183.59,176.97 L 183.20,178.04 L 182.81,179.12 L 182.43,180.20 L 182.06,181.29 L 181.69,182.38 L 181.34,183.48 L 180.99,184.59 L 180.64,185.70 L 180.31,186.81 L 179.98,187.93 L 179.67,189.05 L 179.36,190.17 L 179.06,191.29 L 178.77,192.42 L 178.48,193.55 L 178.21,194.67 L 177.95,195.80 L 177.69,196.93 L 177.44,198.06 L 177.21,199.18 L 176.98,200.31 L 176.76,201.43 L 176.55,202.55 L 176.36,203.67" fill="none" stroke="#e66558" stroke-width="1.7" stroke-linecap="round"/>
+<polygon points="176.17,204.78 174.72,197.93 179.84,198.82" fill="#e66558"/>
+<text x="197.31" y="185.81" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" fill="#e66558">30°</text>
+<line x1="139.22" y1="176.79" x2="186.53" y2="169.71" stroke="#7d8590" stroke-width="1.7" stroke-dasharray="4 3" stroke-linecap="round"/>
+<circle cx="186.53" cy="169.71" r="2.6" fill="#7d8590"/>
+<line x1="139.22" y1="176.79" x2="171.00" y2="200.87" stroke="#e66558" stroke-width="2.4" stroke-linecap="round"/>
+<polygon points="176.17,204.78 166.88,202.14 171.11,196.56" fill="#e66558"/>
+<circle cx="139.22" cy="176.79" r="2.6" fill="#e6edf3"/>
+<text x="196.53" y="161.71" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8b949e">v<tspan dy="2.5" font-size="78%">0</tspan></text>
+<text x="184.17" y="217.78" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#e66558">v<tspan dy="2.5" font-size="78%">1</tspan></text>
+<text x="160.00" y="299" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8b949e">v<tspan dy="2.5" font-size="78%">1</tspan><tspan dy="-2.5"> = R</tspan><tspan dy="2.5" font-size="78%">x</tspan><tspan dy="-2.5">v</tspan><tspan dy="2.5" font-size="78%">0</tspan><tspan dy="-2.5"> = (2.000, 0.366, 1.366)</tspan></text>
+<text x="480.00" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#e6edf3">2. Rotate around Y (<tspan fill="#45b572">θ</tspan><tspan fill="#45b572" dy="2.5" font-size="80%">y</tspan><tspan dy="-2.5"> = 45°</tspan>)</text>
+<line x1="453.35" y1="158.61" x2="545.09" y2="181.97" stroke="#232a35" stroke-width="1"/>
+<line x1="453.35" y1="158.61" x2="373.78" y2="194.46" stroke="#232a35" stroke-width="1"/>
+<line x1="404.84" y1="180.47" x2="505.00" y2="213.53" stroke="#232a35" stroke-width="1"/>
+<line x1="511.00" y1="173.29" x2="437.96" y2="219.32" stroke="#232a35" stroke-width="1"/>
+<line x1="373.78" y1="194.46" x2="477.96" y2="234.82" stroke="#232a35" stroke-width="1"/>
+<line x1="545.09" y1="181.97" x2="477.96" y2="234.82" stroke="#232a35" stroke-width="1"/>
+<line x1="444.71" y1="172.62" x2="459.22" y2="176.79" stroke="#e66558" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.2"/>
+<line x1="459.22" y1="176.79" x2="552.74" y2="203.68" stroke="#e66558" stroke-width="1.15" stroke-linecap="round" stroke-opacity="0.36"/>
+<polygon points="557.23,204.97 550.30,205.58 551.68,200.77" fill="#e66558" fill-opacity="0.36"/>
+<text x="567.23" y="208.97" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-style="italic" font-weight="600" fill="#e66558" fill-opacity="0.6">x</text>
+<line x1="470.34" y1="170.95" x2="459.22" y2="176.79" stroke="#5798ec" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.2"/>
+<line x1="459.22" y1="176.79" x2="382.63" y2="217.03" stroke="#5798ec" stroke-width="1.15" stroke-linecap="round" stroke-opacity="0.36"/>
+<polygon points="378.48,219.21 383.08,213.97 385.40,218.40" fill="#5798ec" fill-opacity="0.36"/>
+<text x="367.48" y="224.21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-style="italic" font-weight="600" fill="#5798ec" fill-opacity="0.6">z</text>
+<line x1="459.49" y1="190.46" x2="459.22" y2="176.79" stroke="#45b572" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.35"/>
+<line x1="459.22" y1="176.79" x2="457.40" y2="82.84" stroke="#45b572" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.95"/>
+<polygon points="457.31,78.16 459.94,84.62 454.94,84.71" fill="#45b572" fill-opacity="0.95"/>
+<text x="467.31" y="76.16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-style="italic" font-weight="600" fill="#45b572" fill-opacity="1.0">y</text>
+<polygon points="458.97,163.89 496.17,204.78 498.88,204.28 501.54,203.74 504.16,203.18 506.72,202.60 509.22,201.98 511.67,201.34 514.06,200.68 516.39,200.00 518.66,199.29 520.86,198.56 523.00,197.82 525.06,197.05 527.06,196.26 528.99,195.46 530.85,194.65 532.64,193.82 534.35,192.97 536.00,192.12 537.57,191.25 539.06,190.37 540.48,189.48 541.83,188.59 543.10,187.68 544.30,186.77 545.43,185.86 546.48,184.94 547.46,184.01 548.36,183.09 549.19,182.16 549.96,181.23 550.65,180.30 551.27,179.37" fill="#45b572" fill-opacity="0.18"/>
+<line x1="458.97" y1="163.89" x2="496.17" y2="204.78" stroke="#45b572" stroke-width="1" stroke-dasharray="2.5 2.5" stroke-opacity="0.55"/>
+<line x1="458.97" y1="163.89" x2="551.27" y2="179.37" stroke="#45b572" stroke-width="1" stroke-dasharray="2.5 2.5" stroke-opacity="0.65"/>
+<circle cx="458.97" cy="163.89" r="2.3" fill="#45b572"/>
+<path d="M 496.17,204.78 L 498.88,204.28 L 501.54,203.74 L 504.16,203.18 L 506.72,202.60 L 509.22,201.98 L 511.67,201.34 L 514.06,200.68 L 516.39,200.00 L 518.66,199.29 L 520.86,198.56 L 523.00,197.82 L 525.06,197.05 L 527.06,196.26 L 528.99,195.46 L 530.85,194.65 L 532.64,193.82 L 534.35,192.97 L 536.00,192.12 L 537.57,191.25 L 539.06,190.37 L 540.48,189.48 L 541.83,188.59 L 543.10,187.68 L 544.30,186.77 L 545.43,185.86 L 546.48,184.94 L 547.46,184.01 L 548.36,183.09 L 549.19,182.16 L 549.96,181.23 L 550.65,180.30" fill="none" stroke="#45b572" stroke-width="1.7" stroke-linecap="round"/>
+<polygon points="551.27,179.37 549.65,186.18 545.40,183.18" fill="#45b572"/>
+<text x="546.64" y="205.82" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" fill="#45b572">45°</text>
+<line x1="459.22" y1="176.79" x2="496.17" y2="204.78" stroke="#7d8590" stroke-width="1.7" stroke-dasharray="4 3" stroke-linecap="round"/>
+<circle cx="496.17" cy="204.78" r="2.6" fill="#7d8590"/>
+<line x1="459.22" y1="176.79" x2="544.79" y2="179.19" stroke="#45b572" stroke-width="2.4" stroke-linecap="round"/>
+<polygon points="551.27,179.37 542.17,182.62 542.37,175.62" fill="#45b572"/>
+<circle cx="459.22" cy="176.79" r="2.6" fill="#e6edf3"/>
+<text x="504.17" y="216.78" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8b949e">v<tspan dy="2.5" font-size="78%">1</tspan></text>
+<text x="561.27" y="175.37" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#45b572">v<tspan dy="2.5" font-size="78%">2</tspan></text>
+<text x="480.00" y="299" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8b949e">v<tspan dy="2.5" font-size="78%">2</tspan><tspan dy="-2.5"> = R</tspan><tspan dy="2.5" font-size="78%">y</tspan><tspan dy="-2.5">v</tspan><tspan dy="2.5" font-size="78%">1</tspan><tspan dy="-2.5"> = (2.380, 0.366, −0.448)</tspan></text>
+<text x="800.00" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#e6edf3">3. Rotate around Z (<tspan fill="#5798ec">θ</tspan><tspan fill="#5798ec" dy="2.5" font-size="80%">z</tspan><tspan dy="-2.5"> = 60°</tspan>)</text>
+<line x1="773.35" y1="158.61" x2="865.09" y2="181.97" stroke="#232a35" stroke-width="1"/>
+<line x1="773.35" y1="158.61" x2="693.78" y2="194.46" stroke="#232a35" stroke-width="1"/>
+<line x1="724.84" y1="180.47" x2="825.00" y2="213.53" stroke="#232a35" stroke-width="1"/>
+<line x1="831.00" y1="173.29" x2="757.96" y2="219.32" stroke="#232a35" stroke-width="1"/>
+<line x1="693.78" y1="194.46" x2="797.96" y2="234.82" stroke="#232a35" stroke-width="1"/>
+<line x1="865.09" y1="181.97" x2="797.96" y2="234.82" stroke="#232a35" stroke-width="1"/>
+<line x1="764.71" y1="172.62" x2="779.22" y2="176.79" stroke="#e66558" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.2"/>
+<line x1="779.22" y1="176.79" x2="872.74" y2="203.68" stroke="#e66558" stroke-width="1.15" stroke-linecap="round" stroke-opacity="0.36"/>
+<polygon points="877.23,204.97 870.30,205.58 871.68,200.77" fill="#e66558" fill-opacity="0.36"/>
+<text x="887.23" y="208.97" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-style="italic" font-weight="600" fill="#e66558" fill-opacity="0.6">x</text>
+<line x1="779.49" y1="190.46" x2="779.22" y2="176.79" stroke="#45b572" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.2"/>
+<line x1="779.22" y1="176.79" x2="777.40" y2="82.84" stroke="#45b572" stroke-width="1.15" stroke-linecap="round" stroke-opacity="0.36"/>
+<polygon points="777.31,78.16 779.94,84.62 774.94,84.71" fill="#45b572" fill-opacity="0.36"/>
+<text x="787.31" y="76.16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-style="italic" font-weight="600" fill="#45b572" fill-opacity="0.6">y</text>
+<line x1="790.34" y1="170.95" x2="779.22" y2="176.79" stroke="#5798ec" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.35"/>
+<line x1="779.22" y1="176.79" x2="702.63" y2="217.03" stroke="#5798ec" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.95"/>
+<polygon points="698.48,219.21 703.08,213.97 705.40,218.40" fill="#5798ec" fill-opacity="0.95"/>
+<text x="687.48" y="224.21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-style="italic" font-weight="600" fill="#5798ec" fill-opacity="1.0">z</text>
+<polygon points="789.24,171.53 871.27,179.37 871.00,176.18 870.63,172.97 870.16,169.75 869.58,166.51 868.89,163.27 868.11,160.02 867.21,156.78 866.22,153.55 865.13,150.33 863.93,147.14 862.64,143.97 861.25,140.84 859.77,137.74 858.20,134.68 856.54,131.67 854.80,128.71 852.97,125.82 851.06,122.98 849.08,120.21 847.03,117.52 844.91,114.90 842.72,112.36 840.48,109.90 838.17,107.53 835.82,105.26 833.42,103.07 830.97,100.99 828.49,99.00 825.96,97.12 823.41,95.34 820.84,93.66 818.24,92.10" fill="#5798ec" fill-opacity="0.18"/>
+<line x1="789.24" y1="171.53" x2="871.27" y2="179.37" stroke="#5798ec" stroke-width="1" stroke-dasharray="2.5 2.5" stroke-opacity="0.55"/>
+<line x1="789.24" y1="171.53" x2="818.24" y2="92.10" stroke="#5798ec" stroke-width="1" stroke-dasharray="2.5 2.5" stroke-opacity="0.65"/>
+<circle cx="789.24" cy="171.53" r="2.3" fill="#5798ec"/>
+<path d="M 871.27,179.37 L 871.00,176.18 L 870.63,172.97 L 870.16,169.75 L 869.58,166.51 L 868.89,163.27 L 868.11,160.02 L 867.21,156.78 L 866.22,153.55 L 865.13,150.33 L 863.93,147.14 L 862.64,143.97 L 861.25,140.84 L 859.77,137.74 L 858.20,134.68 L 856.54,131.67 L 854.80,128.71 L 852.97,125.82 L 851.06,122.98 L 849.08,120.21 L 847.03,117.52 L 844.91,114.90 L 842.72,112.36 L 840.48,109.90 L 838.17,107.53 L 835.82,105.26 L 833.42,103.07 L 830.97,100.99 L 828.49,99.00 L 825.96,97.12 L 823.41,95.34 L 820.84,93.66" fill="none" stroke="#5798ec" stroke-width="1.7" stroke-linecap="round"/>
+<polygon points="818.24,92.10 825.13,93.34 822.37,97.75" fill="#5798ec"/>
+<text x="868.80" y="124.71" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" fill="#5798ec">60°</text>
+<line x1="779.22" y1="176.79" x2="871.27" y2="179.37" stroke="#7d8590" stroke-width="1.7" stroke-dasharray="4 3" stroke-linecap="round"/>
+<circle cx="871.27" cy="179.37" r="2.6" fill="#7d8590"/>
+<line x1="779.22" y1="176.79" x2="815.53" y2="97.98" stroke="#e6edf3" stroke-width="2.4" stroke-linecap="round"/>
+<polygon points="818.24,92.10 817.65,101.74 811.29,98.81" fill="#e6edf3"/>
+<circle cx="779.22" cy="176.79" r="2.6" fill="#e6edf3"/>
+<text x="881.27" y="183.37" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8b949e">v<tspan dy="2.5" font-size="78%">2</tspan></text>
+<text x="802.24" y="86.10" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#e6edf3">v′</text>
+<text x="800.00" y="299" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8b949e">v′ = R<tspan dy="2.5" font-size="78%">z</tspan><tspan dy="-2.5">v</tspan><tspan dy="2.5" font-size="78%">2</tspan><tspan dy="-2.5"> = (0.873, 2.244, −0.448)</tspan></text>
+</svg>
